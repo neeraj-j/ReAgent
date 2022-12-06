@@ -29,10 +29,15 @@ __pycache__/
 
 # C extensions
 *.so
+# shell files 
+*.sh
+*.swp
 
 # Distribution / packaging
 .Python
 env/
+runs/
+pl_log_tensorboard/
 build/
 develop-eggs/
 dist/

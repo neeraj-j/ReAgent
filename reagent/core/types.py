@@ -297,7 +297,7 @@ def run_post_init_validation(
         "For sequence features, use `stacked_float_features`."
         + "For document features, use `candidate_doc_float_features`."
     )
-
+    '''
     if float_features.ndim == 3:
         if not torch.jit.is_scripting():
             no_dup_logger.warning(f"`float_features` should be 2D.\n{usage}")
@@ -306,6 +306,7 @@ def run_post_init_validation(
         raise ValueError(
             f"float_features should be 2D; got {float_features.shape}.\n{usage}"
         )
+    '''
 
 
 @dataclass
@@ -692,7 +693,7 @@ class BaseInput(TensorDataClass):
     not_terminal: torch.Tensor
 
     def __len__(self):
-        assert self.state.float_features.ndim == 2
+        # assert self.state.float_features.ndim == 2
         return self.state.float_features.size()[0]
 
     def batch_size(self):

@@ -1,0 +1,32 @@
+{
+	"COMMENT": "This is a sample config file",
+	"DATASET": {
+		"dataset": "db_name",
+		"threshold": 0,
+		"indices": [""],
+		"loader": "myloader",
+		"train": "path/to/train/dataset",
+		"valid": "path/to/eval/dataset",
+		"test": "path/to/test/dataset"
+	},
+	"MODEL": {
+		"_comment": "number of actions",
+		"classes": 2, 
+		"channels": 1, 
+		"name": "mobilenet_v3_large"
+	},
+	"TRAIN": {
+		"epochs": 500,
+		"output_dir":"output",
+		"batch_size": 8,
+        "lr_warmup_epochs": 5,
+		"min_lr": 0.0001,
+		"max_lr": 0.05,
+        "opt": "sgd",
+        "lr_warmup_decay": 0.01,
+		"workers": 8
+	},
+	"AUTO_RESUME": 1,
+	"PRINT_FREQ": 5000
+	
+}

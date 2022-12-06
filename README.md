@@ -6,6 +6,9 @@
 [![codecov](https://codecov.io/gh/facebookresearch/ReAgent/branch/main/graph/badge.svg)](https://codecov.io/gh/facebookresearch/ReAgent)
 ---
 
+### About this fork
+This is a fork of ReAgent, RL framework by Facebook. In this fork I have build a custom pipeline and added custom netbuilder, models, model manager, data module and config file. The objective is to make it easier for anyone to experiment with this offline RL framework. For detailed purpose, objectives, modifications and usage, please read docs. The original code works as is. 
+
 ### Overview
 ReAgent is an open source end-to-end platform for applied reinforcement learning (RL) developed and used at Facebook. ReAgent is built in Python and uses PyTorch for modeling and training and TorchScript for model serving. The platform contains workflows to train popular deep RL algorithms and includes data preprocessing, feature transformation, distributed training, counterfactual policy evaluation, and optimized serving. For more detailed information about ReAgent see the release post [here](https://research.fb.com/publications/horizon-facebooks-open-source-applied-reinforcement-learning-platform/) and white paper [here](https://arxiv.org/abs/1811.00260).
 

@@ -138,7 +138,7 @@ def train_eval_lightning(
         max_epochs=num_epochs * 1000,
         gpus=int(use_gpu),
         reload_dataloaders_every_n_epochs=1,
-        resume_from_checkpoint=checkpoint_path,
+        # resume_from_checkpoint=checkpoint_path,
         callbacks=[StoppingEpochCallback(num_epochs)],
     )
     trainer.fit(trainer_module, datamodule=datamodule)

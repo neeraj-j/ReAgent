@@ -19,6 +19,7 @@ from .continuous_actor.gaussian_fully_connected import (
 from .discrete_actor.fully_connected import (
     FullyConnected as FullyConnectedDiscreteActorType,
 )
+from .discrete_dqn.mob_net import MobNet as MobNetType
 from .discrete_dqn.dueling import Dueling as DuelingType
 from .discrete_dqn.fully_connected import FullyConnected as FullyConnectedType
 from .discrete_dqn.fully_connected_with_embedding import (
@@ -66,6 +67,7 @@ class DiscreteDQNNetBuilder__Union(TaggedUnion):
     Dueling: Optional[DuelingType] = None
     FullyConnected: Optional[FullyConnectedType] = None
     FullyConnectedWithEmbedding: Optional[FullyConnectedWithEmbeddingType] = None
+    MobNet: Optional[MobNetType] = None
 
 
 @wrap_oss_with_dataclass
